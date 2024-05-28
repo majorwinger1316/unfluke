@@ -1,0 +1,294 @@
+.dashboard{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #ECF2FF;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.welcome p{
+    color: #555;
+    font-size: 20px;
+    justify-content: left;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-left: 60px;
+}
+
+.graphs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.graph {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    width: 500px; /* Adjust the width as needed */
+    height: 550px; /* Adjust the height as needed */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ECF2FF;
+    margin-left: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+.graph p{
+    color: #555;
+    font-size: large;
+    font-weight: 600;
+}
+
+.graph canvas {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.portfolio {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    width: 700px; /* Adjust the width as needed */
+    height: 550px; /* Adjust the height as needed */
+    margin-top: 20px;
+    padding: 20px;
+    align-items: center;
+    background-color: #ECF2FF;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.start p{
+    color: #555;
+    font-size: large;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.money{
+    display: flex;
+    flex-direction: column;
+}
+
+.money p{
+    color: #555;
+    font-weight: 800;
+    align-self: center;
+    font-size: 25px;
+}
+
+.collection{
+    display: flex;
+    flex-direction: column;
+}
+
+.bitcoin{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: left;
+}
+
+.bitcoin img{
+    color: #555;
+}
+
+.bitcoin p{
+    color:#555;
+    font-size: 35px;
+}
+
+.backtest{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    padding: 5px;
+    background-color: #ECF2FF;
+    margin-left: 60px;
+    border-radius: 8px;
+    margin-right: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Add horizontal scroll */
+}
+
+.topper{
+    display: flex;
+    flex-direction: row;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+}
+
+.top p{
+    color: #555;
+    font-size: 20px;
+    justify-content: left;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.right-top{
+    display: flex;
+    flex-direction: column;
+    margin-left: 925px;
+}
+
+.dropdown-toggle{
+    margin-left: 0px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #686D76;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+    background-color: #2A629A;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.backtest table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0px;
+}
+
+.backtest table th,
+.backtest table td{
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.backtest table th{
+    background-color: #2A629A;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.backtest table td{
+    color: #555;
+}
+
+.backtest table tr:hover{
+    background-color: #f1f1f1;
+}
+
+.backtest table tr:nth-child(even){
+    background-color: #f9f9f9;
+}
+
+.backtest table tr td:last-child{
+    display: flex;
+    justify-content: center;
+}
+
+.backtest table td:last-child button{
+    padding: 6px 12px;
+    margin: 0 5px;
+    border: none;
+    background-color: #686D76;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.backtest table td:last-child button:hover{
+    background-color: #2A629A;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .graphs {
+        flex-direction: column;
+    }
+
+    .graph, .portfolio {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .right-top {
+        margin-left: 0;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome p {
+        margin-left: 20px;
+    }
+
+    .graph, .portfolio {
+        width: 100%;
+        height: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .right-top {
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome p {
+        margin-left: 10px;
+    }
+
+    .graph, .portfolio, .backtest {
+        width: 100%;
+        height: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+    }
+}

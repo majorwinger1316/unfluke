@@ -1,0 +1,273 @@
+.scanner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 40px;
+    padding: 20px;
+}
+
+.myscanner, .publicscanner {
+    width: 80%;
+    background-color: #ECF2FF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.myscanner p, .titlescan p {
+    color: #555;
+    font-size: 22px;
+    text-align: center;
+}
+
+.myscanner table, .publicscanner table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    overflow-x: auto; /* Add horizontal scroll */
+}
+
+.myscanner table th, .publicscanner table th,
+.myscanner table td, .publicscanner table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.myscanner table th, .publicscanner table th {
+    background-color: #2A629A;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.myscanner table td, .publicscanner table td {
+    color: #555;
+}
+
+.myscanner table tr:hover, .publicscanner table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.myscanner table tr:nth-child(even), .publicscanner table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.myscanner table tr td:last-child, .publicscanner table tr td:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.myscanner table td:last-child button, .publicscanner table td:last-child button {
+    padding: 6px 12px;
+    margin: 0 5px;
+    border: none;
+    background-color: #686D76;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.myscanner table td:last-child button:hover, .publicscanner table td:last-child button:hover {
+    background-color: #2A629A;
+}
+
+.scanner-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.scanner-item {
+    height: 100px;
+    width: calc(33.33% - 20px); /* Adjusted width to fit three items */
+    margin: 10px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: #2A629A;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    position: relative;
+    text-align: center;
+}
+
+.scanner-item p.subtitle {
+    display: none;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+}
+
+.scanner-item p.titl {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+}
+
+.scanner-item:hover {
+    background-color: #2A629A;
+    color: #fff;
+    height: 200px;
+    width: 320px;
+    transform: scale(1.1); /* Enlarge the item on hover */
+    border: 1px solid #2A629A; /* Change border color on hover */
+    transition: height width 0.1s ease-in-out;
+}
+
+.scanner-item:hover p.subtitle {
+    display: block;
+    background-color: #2A629A;
+    color: #fff;
+    font-size: 16px;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 158px;
+}
+
+.scanner-item:hover p.titl {
+    display: block;
+    background-color: #2A629A;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+}
+
+.scanner-item:hover .MuiSvgIcon-root {
+    color: white; 
+    background-color: #2A629A;
+}
+
+.scanner-item:hover .item-title {
+    background-color: #2A629A;
+}
+
+.item-title {
+    margin-top: 10px;
+}
+
+.scanner-details {
+    position: fixed;
+    top: 50%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    z-index: 1000;
+}
+
+.scanner-details p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #686D76;
+}
+
+.scanner-details .scanner-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color:#686D76;
+}
+
+.scanner-details .scanner-list li {
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.scanner-details button {
+    border: none;
+    background: transparent;
+    color: #686D76;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.scanner-details button:hover {
+    color: #ccc;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .scanner-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .scanner-item {
+        width: 90%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .scanner-item:hover {
+        height: auto;
+        width: 100%;
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .myscanner, .publicscanner {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .scanner-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .scanner-item:hover {
+        height: auto;
+        width: 100%;
+        transform: none;
+    }
+
+    .scanner-details {
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .myscanner, .publicscanner {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .scanner-item {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .scanner-item:hover {
+        height: auto;
+        width: 100%;
+        transform: none;
+    }
+
+    .scanner-details {
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

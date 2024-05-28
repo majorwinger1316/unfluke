@@ -1,0 +1,23 @@
+.home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECF2FF;
+    flex-direction: column;
+    padding-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.typer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #686D76;
+    margin-top: 200px;
+    z-index: 1; /* Ensure the typewriter text is above the background image */
+}
